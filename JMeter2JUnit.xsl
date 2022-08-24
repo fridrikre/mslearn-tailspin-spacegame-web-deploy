@@ -23,6 +23,13 @@
             <failure><xsl:value-of select="format-number($exceeds-threshold div count($times) * 100,'#.##')"/>% of requests exceed <xsl:value-of select="$threshold"/> ms threshold.</failure>
           </xsl:if>
       </testcase>
+      <testcase>
+          <xsl:attribute name="name">Sky is blue</xsl:attribute>
+          <xsl:attribute name="is_it">Yes</xsl:attribute>
+          <xsl:if test="true != true">
+            <failure>Sky is not blue!</failure>
+          </xsl:if>
+      </testcase>
     </testsuite>
   </xsl:template>
 </xsl:stylesheet>
